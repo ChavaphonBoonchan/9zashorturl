@@ -45,7 +45,7 @@ def shorten_url():
     # ตรวจสอบว่าลิงก์นี้เคยถูกย่อแล้วหรือไม่
     existing_url = URL.query.filter_by(long_url=long_url).first()
     if existing_url:
-        return jsonify({'shortUrl': f"http://localhost:5000/{existing_url.short_url}"}), 200
+        return jsonify({'shortUrl': f"http://shorturl.9zahub.com/{existing_url.short_url}"}), 200
 
     # สร้างลิงก์สั้นและเก็บข้อมูลในฐานข้อมูล
     short_url = generate_short_url()
